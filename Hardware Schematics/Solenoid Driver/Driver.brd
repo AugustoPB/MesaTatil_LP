@@ -25,7 +25,7 @@
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
@@ -122,30 +122,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="1X02">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<pad name="1" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="1.27" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-</package>
 <package name="1X01">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
@@ -1427,7 +1403,7 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="default *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -1445,8 +1421,8 @@ design rules under a new name.</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="8mil"/>
-<param name="mdWirePad" value="8mil"/>
+<param name="mdWireWire" value="24mil"/>
+<param name="mdWirePad" value="24mil"/>
 <param name="mdWireVia" value="8mil"/>
 <param name="mdPadPad" value="8mil"/>
 <param name="mdPadVia" value="8mil"/>
@@ -1456,10 +1432,10 @@ design rules under a new name.</description>
 <param name="mdSmdSmd" value="8mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="40mil"/>
-<param name="mdDrill" value="8mil"/>
+<param name="mdCopperDimension" value="24mil"/>
+<param name="mdDrill" value="24mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="10mil"/>
+<param name="msWidth" value="24mil"/>
 <param name="msDrill" value="24mil"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
@@ -1499,7 +1475,7 @@ design rules under a new name.</description>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
-<param name="slThermalIsolate" value="10mil"/>
+<param name="slThermalIsolate" value="0mil"/>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
@@ -1608,8 +1584,7 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="D1" library="diode" package="DO41-10" value="1N4004" x="57.15" y="38.1" rot="R90"/>
-<element name="JP1" library="pinhead" package="1X02" value="" x="60.96" y="38.1" rot="R90"/>
-<element name="JP2" library="pinhead" package="1X01" value="" x="45.085" y="41.275"/>
+<element name="JP2" library="pinhead" package="1X01" value="" x="44.45" y="34.925"/>
 <element name="R1" library="rcl" package="0204V" value="" x="46.355" y="38.1"/>
 <element name="T1" library="transistor" package="TO220" value="TIP31" x="50.8" y="46.99"/>
 <element name="X1" library="con-ptr500" package="AK500/2-H" value="" x="50.8" y="33.02">
@@ -1624,18 +1599,25 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="50.8" y="46.99" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="50.8" y="46.99" size="1.778" layer="27" display="off"/>
 </element>
+<element name="X3" library="con-ptr500" package="AK500/2-H" value="" x="60.325" y="37.465" rot="R90">
+<attribute name="OC_NEWARK" value="unknown" x="60.325" y="37.465" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="" x="60.325" y="37.465" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="60.325" y="37.465" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="" x="60.325" y="37.465" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="D1" pad="A"/>
 <contactref element="T1" pad="2"/>
-<contactref element="JP1" pad="2"/>
-<wire x1="60.96" y1="39.37" x2="57.15" y2="43.18" width="1.9304" layer="16"/>
 <wire x1="57.15" y1="43.18" x2="57.15" y2="40.005" width="1.9304" layer="16"/>
 <wire x1="57.15" y1="40.005" x2="53.975" y2="36.83" width="1.9304" layer="16"/>
 <wire x1="53.975" y1="36.83" x2="51.435" y2="36.83" width="1.9304" layer="16"/>
 <wire x1="51.435" y1="36.83" x2="50.8" y2="37.465" width="1.9304" layer="16"/>
 <wire x1="50.8" y1="37.465" x2="50.8" y2="40.64" width="1.9304" layer="16"/>
+<contactref element="X3" pad="2"/>
+<wire x1="60.325" y1="39.9796" x2="57.15" y2="39.9796" width="1.9304" layer="16"/>
+<wire x1="57.15" y1="39.9796" x2="57.15" y2="40.005" width="1.9304" layer="16"/>
 </signal>
 <signal name="N$2">
 <contactref element="R1" pad="2"/>
@@ -1645,57 +1627,37 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$5">
 <contactref element="D1" pad="C"/>
-<contactref element="JP1" pad="1"/>
 <contactref element="X1" pad="2"/>
 <contactref element="X2" pad="2"/>
-<wire x1="57.15" y1="33.02" x2="57.15" y2="34.925" width="1.9304" layer="16"/>
-<wire x1="57.15" y1="34.925" x2="59.055" y2="36.83" width="1.9304" layer="16"/>
-<wire x1="59.055" y1="36.83" x2="60.96" y2="36.83" width="1.9304" layer="16"/>
 <wire x1="53.3146" y1="33.02" x2="57.15" y2="33.02" width="1.9304" layer="16"/>
-<wire x1="60.96" y1="36.83" x2="62.865" y2="36.83" width="1.9304" layer="16"/>
-<wire x1="62.865" y1="36.83" x2="64.135" y2="38.1" width="1.9304" layer="16"/>
-<wire x1="64.135" y1="38.1" x2="64.135" y2="41.275" width="1.9304" layer="16"/>
+<wire x1="64.135" y1="37.465" x2="64.135" y2="41.275" width="1.9304" layer="16"/>
 <wire x1="64.135" y1="41.275" x2="58.42" y2="46.99" width="1.9304" layer="16"/>
 <wire x1="58.42" y1="46.99" x2="53.3146" y2="46.99" width="1.9304" layer="16"/>
+<contactref element="X3" pad="1"/>
+<wire x1="64.135" y1="37.465" x2="61.595" y2="34.925" width="1.9304" layer="16"/>
+<wire x1="61.595" y1="34.925" x2="60.3504" y2="34.925" width="1.9304" layer="16"/>
+<wire x1="60.3504" y1="34.925" x2="60.325" y2="34.9504" width="1.9304" layer="16"/>
+<wire x1="57.15" y1="33.02" x2="58.3946" y2="33.02" width="1.9304" layer="16"/>
+<wire x1="58.3946" y1="33.02" x2="60.325" y2="34.9504" width="1.9304" layer="16"/>
 </signal>
 <signal name="N$4">
 <contactref element="R1" pad="1"/>
 <contactref element="JP2" pad="1"/>
-<wire x1="45.085" y1="38.1" x2="45.085" y2="41.275" width="1.27" layer="16"/>
+<wire x1="45.085" y1="38.1" x2="44.45" y2="37.465" width="1.27" layer="16"/>
+<wire x1="44.45" y1="37.465" x2="44.45" y2="34.925" width="1.27" layer="16"/>
 </signal>
-<signal name="N$3">
+<signal name="GND">
+<polygon width="0.4064" layer="16" orphans="yes">
+<vertex x="40.005" y="54.61"/>
+<vertex x="66.04" y="54.61"/>
+<vertex x="66.04" y="29.845"/>
+<vertex x="40.005" y="29.845"/>
+</polygon>
 <contactref element="T1" pad="3"/>
 <contactref element="X1" pad="1"/>
 <contactref element="X2" pad="1"/>
-<wire x1="53.34" y1="40.64" x2="53.34" y2="42.545" width="1.9304" layer="16"/>
-<wire x1="53.34" y1="42.545" x2="48.895" y2="46.99" width="1.9304" layer="16"/>
-<wire x1="48.895" y1="46.99" x2="48.2854" y2="46.99" width="1.9304" layer="16"/>
-<wire x1="44.45" y1="46.99" x2="48.2854" y2="46.99" width="1.9304" layer="16"/>
-<wire x1="44.45" y1="46.99" x2="41.91" y2="44.45" width="1.9304" layer="16"/>
-<wire x1="41.91" y1="44.45" x2="41.91" y2="34.925" width="1.9304" layer="16"/>
-<wire x1="41.91" y1="34.925" x2="43.815" y2="33.02" width="1.9304" layer="16"/>
-<wire x1="43.815" y1="33.02" x2="48.2854" y2="33.02" width="1.9304" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="6,16,2847ce97a5ba636f"/>
-<approved hash="6,16,ac4b82b4afc23e63"/>
-<approved hash="4,16,ad892a01d714558c"/>
-<approved hash="4,16,ad716e3a132ed67e"/>
-<approved hash="4,16,51abd6322a3eada7"/>
-<approved hash="4,16,f43b733476e4c9eb"/>
-<approved hash="4,16,4d3b633568f372ff"/>
-<approved hash="4,16,7d26fa29f7fc00f7"/>
-<approved hash="4,16,0705b00a85c52ace"/>
-<approved hash="4,16,0681b00e862415af"/>
-<approved hash="4,16,0f7eb37185a411af"/>
-<approved hash="6,16,e4efa222c107bc5a"/>
-<approved hash="6,16,12736b1eabd71e53"/>
-<approved hash="4,16,69b8e0e59cd3118e"/>
-<approved hash="4,16,0babcb913394f3be"/>
-<approved hash="4,16,3c12c6ca3fc5ffe5"/>
-<approved hash="4,16,3c00caa333acc715"/>
-</errors>
 </board>
 </drawing>
 </eagle>
