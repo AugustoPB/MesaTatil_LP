@@ -1,6 +1,9 @@
+#ifndef MESATATILDEF_H
+#define MESATATILDEF_H 
 #include "stm32f0xx.h"                  // Device header
 #include "stm32f0xx_hal.h"
 #include "gpio.h"
+#define NUM_PINS 35
 
 // Pinout struct definition
 typedef struct pinout
@@ -10,12 +13,11 @@ typedef struct pinout
 }pinout;
 
 // Vector definition of output pins, must be in ascending order
-pinout tablePinout[35] = 
-{
-{GPIOA,0} ,{GPIOA,1} ,{GPIOA,4} ,{GPIOA,6} ,{GPIOA,7} ,{GPIOA,8} ,{GPIOA,9},
-{GPIOA,10},{GPIOA,11},{GPIOA,12},{GPIOA,15},{GPIOB,0} ,{GPIOB,1} ,{GPIOB,2},
-{GPIOB,3} ,{GPIOB,4} ,{GPIOB,5} ,{GPIOB,6} ,{GPIOB,7} ,{GPIOB,8} ,{GPIOB,9},
-{GPIOB,10},{GPIOB,11},{GPIOB,12},{GPIOB,13},{GPIOB,14},{GPIOB,15},{GPIOC,0},
-{GPIOC,1} ,{GPIOC,2} ,{GPIOC,3} ,{GPIOC,4} ,{GPIOC,5} ,{GPIOC,6} ,{GPIOC,7}
-};
-	
+
+
+void mesaTatil_update(long int data);
+void mesaTatil_updateFromMatrix(int *data);
+long int mesaTatil_MatrixConversion(int *data);
+void mesaTatil_WritePin(int line, int column, int state);
+
+#endif

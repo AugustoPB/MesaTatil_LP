@@ -1,3 +1,14 @@
+#define NUM_WAVES 10
+#define SENO 1
+#define COSSENO 2
+#define QUADRADA 3
+#define TRIANGULAR 4
+#define SERRA 5
+#define AND 6
+#define OR 7
+#define XOR 8
+#define BUFFER 9
+#define SERIAL 0
 		int seno[5][7] = 
 		{
 			{0,0,0,0,0,0,0},
