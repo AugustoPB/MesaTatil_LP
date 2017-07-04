@@ -43,13 +43,15 @@
 
 /* USER CODE BEGIN Includes */
 #include "MesaTatilDef.h"
+#include "waves.h"
+
+
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,17 +94,55 @@ int main(void)
   MX_USART2_UART_Init();
 
   /* USER CODE BEGIN 2 */
-
+	int onda = 0;
+	uint8_t dado[6];  
+	int serialFlag=0;
+	long int dadoSerial;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
-  /* USER CODE END WHILE */
+  {	
+		/*
+		if((GPIOC->IDR&(1<<13))){
+			if (onda == NUM_WAVES){onda = 0;}
+			else {onda++;}
+			HAL_Delay(200);
+			while((GPIOC->IDR&(1<<13))){};
+		}
 
+		switch(onda){
+			case SERIAL:{serialFlag = 1;break;}
+			case SENO:{mesaTatil_updateFromMatrix(*seno);serialFlag = 0;break;} 
+			case COSSENO:{mesaTatil_updateFromMatrix(*cosseno);break;}
+			case QUADRADA:{mesaTatil_updateFromMatrix(*quadrada);break;}
+			case TRIANGULAR:{mesaTatil_updateFromMatrix(*triangular);break;}
+			case SERRA:{mesaTatil_updateFromMatrix(*serra);break;}
+			case AND:{mesaTatil_updateFromMatrix(*portaand);break;}
+			case OR:{mesaTatil_updateFromMatrix(*portaor);break;}
+			case XOR:{mesaTatil_updateFromMatrix(*portaxor);break;}
+			case BUFFER:{mesaTatil_updateFromMatrix(*buffer);break;}
+			default:{mesaTatil_update(0);break;}
+		}*/
+		HAL_UART_Transmit(&huart2,(uint8_t*)"OK",2,100);
+				HAL_Delay(1000);
+		if (serialFlag == 1){
+				if(HAL_UART_Receive(&huart2,dado,5, 100) == HAL_OK){
+					dadoSerial = dado[0] + (dado[1]<<8) + (dado[2]<<16) + (dado[3]<<24) + (dado[4]<<32);
+					HAL_Delay(500);
+					HAL_UART_Transmit(&huart2,"OK",2, 100);
+					mesaTatil_update(dadoSerial);
+				}
+				
+		}
+		
+	/* USER CODE END WHILE */
+	
   /* USER CODE BEGIN 3 */
-
+	
+		
+		
   }
   /* USER CODE END 3 */
 
