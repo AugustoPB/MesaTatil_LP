@@ -10,6 +10,7 @@
       <TargetName>Mesa_Tatil</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F072RB</Device>
@@ -517,6 +518,11 @@
               <FileName>MesaTatilDef.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\MesaTatilDef.c</FilePath>
+            </File>
+            <File>
+              <FileName>waves.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\waves.h</FilePath>
             </File>
           </Files>
         </Group>

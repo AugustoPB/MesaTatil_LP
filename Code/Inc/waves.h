@@ -1,3 +1,14 @@
+#define NUM_WAVES 8
+#define SENO 1
+#define COSSENO 2
+#define QUADRADA 3
+#define TRIANGULAR 4
+#define SERRA 5
+#define AND 6
+#define OR 7
+#define BUFFER 8
+#define SERIAL 0
+#define HOLD -1
 		int seno[5][7] = 
 		{
 			{0,0,0,0,0,0,0},
@@ -54,14 +65,6 @@
 			{1,1,1,0,1,0,0},
 			{0,1,1,1,0,0,0}
 		};
-		int portaxor [5][7] = 
-		{
-			{0,1,0,1,1,0,0},
-			{1,1,1,0,1,1,0},
-			{0,0,1,0,1,0,1},
-			{1,1,1,0,1,1,0},
-			{0,1,0,1,1,0,0}
-		};
 		int buffer[5][7] = 
 		{
 			{0,0,1,0,0,0,0},
@@ -70,3 +73,4 @@
 			{0,0,1,1,0,0,0},
 			{0,0,1,0,0,0,0}
 		};
+
